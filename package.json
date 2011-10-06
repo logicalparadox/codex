@@ -11,6 +11,16 @@
   "engines": {
     "node": ">= 0.4.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "commander": "0.2.x",
+    "drip": "0.0.x",
+    "discount": "0.2.x",
+    "mkdirp": "0.0.x",
+    "jade": "0.16.x",
+    "stylus": "0.17.x",
+    "colors": "0.5.x",
+    "async": "0.1.x",
+    "eyes": "0.1.x"
+  },
   "devDependencies": {}
 }

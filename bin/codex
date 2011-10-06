@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander')
+  , path = require('path')
+  , inspect = require('eyes').inspector()
+  , colors = require('colors')
+  , Codex = require('../lib/codex');
+  
+
+var cwd = process.cwd();
+
+program
+  .version(Codex.version)
+  .option('-o, --out [dir]', 'Specify an out directory, defaults to `__inPath__/out`');
+
+
+program
+  .command('build [inpath]')
+  .description('Build a codex site')
+  .action(function (directory) {
+    var inDir = directory || cwd
+      , outDir = cwd;
+      
+    var codex = new Codex(inDir, outDir);
+    
+    codex.on('error', function (error) {
+      console.log('✗   '.red.bold + error.message.red);
+      inspect(error.data);
+      process.exit();
+    });
+    
+    codex.on('status', function (status) {
+      console.log('✓   '.green.bold + status.message.green);
+      inspect(status.data);
+    });
+    
+    codex.build();
+    
+  });
+
+program.parse(process.argv);
+
+/*
+honored: '' + $('OK').bold.green,
+        broken:  '' + $('Broken').bold.yellow,
+        errored: '✗ ' + $('Errored').bold.red,
+        pending: '- ' + $('Pending').bold.cyan
+        
+        */
