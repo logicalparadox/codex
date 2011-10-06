@@ -43,11 +43,3 @@ program
   });
 
 program.parse(process.argv);
-
-/*
-honored: '' + $('OK').bold.green,
-        broken:  '' + $('Broken').bold.yellow,
-        errored: '✗ ' + $('Errored').bold.red,
-        pending: '- ' + $('Pending').bold.cyan
-        
-        */
