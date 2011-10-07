@@ -6,8 +6,10 @@
 
 var program = require('commander')
   , path = require('path')
+  , fs = require('fs')
   , inspect = require('eyes').inspector()
   , colors = require('colors')
+  , ncp = require('ncp').ncp
   , Codex = require('../');
   
 
@@ -15,12 +17,12 @@ var cwd = process.cwd();
 
 program
   .version(Codex.version)
-  .option('-o, --out [dir]', 'Specify an out directory, defaults to `__inPath__/out`');
+  .option('-o, --out [dir]', 'Specify an out directory for build, defaults to `__inPath__/out`');
 
 
 program
   .command('build [inpath]')
-  .description('Build a codex site')
+  .description('Render site.')
   .action(function (directory) {
     var inDir = directory || cwd
       , outDir = program.out || path.join(cwd, 'out');
@@ -47,6 +49,46 @@ program
     });
     
     codex.build();
+  });
+
+program
+  .command('skeleton [dirname]')
+  .description('Create a skeleton site. Defaults to current working directory.')
+  .action(function (directory) {
+    
+    if (directory) {
+      if (directory.substr(0, 1) != '/')
+        directory = path.resolve(cwd, directory);
+    } else {
+      directory = cwd;
+    }
+    
+    if (!path.existsSync(directory)) {
+      console.log('✗   '.red.bold + 'Path for skeleton does not exist.'.red);
+      process.exit();
+    }
+    
+    fs.readdir(directory, function(err, list) {
+      var copy = function () {
+        ncp(path.join(__dirname, '..', 'skeleton'), directory, function (err) {
+          if (err) throw err;
+          console.log('✓   '.green.bold + 'Skeleton successfully created.');
+          console.log('    ' + directory.blue);
+        });
+      };
+      if (list.length > 0) {
+        program.confirm('Directory isn\'t empty, are you sure you want to continue?'.yellow + ' ', function (ok) {
+          if (ok) {
+            copy();
+          } else {
+            console.log('✗   '.yellow.bold + 'Skeleton creation cancelled by used.'.yellow);
+          }
+          process.stdin.destroy();
+        });
+      } else {
+        copy();
+      }
+    });
   });
 
 program.parse(process.argv);
