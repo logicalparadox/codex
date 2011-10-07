@@ -19,6 +19,9 @@ program
   .version(Codex.version)
   .option('-o, --out [dir]', 'Specify an out directory for build, defaults to `__inPath__/out`');
 
+setTimeout(function() {
+  var b = 'c';
+}, 1000);
 
 program
   .command('build [inpath]')
