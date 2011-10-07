@@ -31,10 +31,11 @@ program
     var codex = new Codex(inDir, outDir);
     
     codex.on('status', function (status) {
-      console.log('\t✓   '.green.bold + status.message.green);
+      message = status.message.green + ( (status.target) ? ': '.green + status.target.blue : '' );
+      console.log('✓   '.green.bold + message);
       if (status.array) {
         status.array.forEach(function (line) {
-          console.log('\t    ' + line.white);
+          console.log('    ' + line.blue);
         });
       }
     });
@@ -46,7 +47,6 @@ program
     });
     
     codex.build();
-    
   });
 
 program.parse(process.argv);
