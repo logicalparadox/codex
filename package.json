@@ -18,6 +18,7 @@
     "mkdirp": "0.0.x",
     "jade": "0.16.x",
     "stylus": "0.17.x",
+    "nib": "0.2.x",
     "colors": "0.5.x",
     "async": "0.1.x",
     "eyes": "0.1.x"

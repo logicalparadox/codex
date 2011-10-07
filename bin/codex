@@ -23,9 +23,21 @@ program
   .description('Build a codex site')
   .action(function (directory) {
     var inDir = directory || cwd
-      , outDir = cwd;
-      
+      , outDir = program.out || path.join(cwd, 'out');
+    
+    if (outDir.substr(0, 1) != '/')
+      outDir = path.resolve(cwd, outDir);
+    
     var codex = new Codex(inDir, outDir);
+    
+    codex.on('status', function (status) {
+      console.log('\t✓   '.green.bold + status.message.green);
+      if (status.array) {
+        status.array.forEach(function (line) {
+          console.log('\t    ' + line.white);
+        });
+      }
+    });
     
     codex.on('error', function (error) {
       console.log('✗   '.red.bold + error.message.red);
@@ -33,21 +45,8 @@ program
       process.exit();
     });
     
-    codex.on('status', function (status) {
-      console.log('✓   '.green.bold + status.message.green);
-      inspect(status.data);
-    });
-    
     codex.build();
     
   });
 
 program.parse(process.argv);
-
-/*
-honored: '' + $('OK').bold.green,
-        broken:  '' + $('Broken').bold.yellow,
-        errored: '✗ ' + $('Errored').bold.red,
-        pending: '- ' + $('Pending').bold.cyan
-        
-        */
