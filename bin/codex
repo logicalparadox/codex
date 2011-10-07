@@ -31,8 +31,12 @@ program
     var codex = new Codex(inDir, outDir);
     
     codex.on('status', function (status) {
-      console.log('✓   '.green.bold + status.message.green);
-      inspect(status.data);
+      console.log('\t✓   '.green.bold + status.message.green);
+      if (status.array) {
+        status.array.forEach(function (line) {
+          console.log('\t    ' + line.white);
+        });
+      }
     });
     
     codex.on('error', function (error) {
