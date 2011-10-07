@@ -1,2 +1,5 @@
-h1 #{file.href}
-content!= file.prepared
+include header
+  #content
+    h2 #{file.inFile}
+    content!= file.prepared
+  include footer
