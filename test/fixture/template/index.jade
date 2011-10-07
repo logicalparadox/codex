@@ -1,6 +1,6 @@
 include header
   #content
-    h2 #{file.inFile}
+    h2 #{file.title}
     content!= file.prepared
     #articles
       - if (files.posts)

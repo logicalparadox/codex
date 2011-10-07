@@ -22,7 +22,8 @@
     "colors": "0.5.x",
     "async": "0.1.x",
     "eyes": "0.1.x",
-    "ncp": "0.2.x"
+    "ncp": "0.2.x",
+    "yaml": "0.2.2"
   },
   "devDependencies": {}
 }
