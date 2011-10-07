@@ -1,16 +1,46 @@
 @import 'nib'
+@import 'fez'
 
 global-reset()
 
+fez()
+
 body
-  padding: 50px
   font 13px/1.4 "helvetica neue", helvetica, arial, sans-serif
 a
-  color #00B7FF
+  color #cc3300
+  text-decoration none
 
-pre, code
-  white-space pre-wrap; /* css-3 */
-  white-space -moz-pre-wrap !important; /* Mozilla, since 1999 */
-  white-space -pre-wrap; /* Opera 4-6 */
-  white-space -o-pre-wrap; /* Opera 7 */
-  word-wrap break-word /* Internet Explorer 5.5+ */
+header, section#content, footer
+  width 740px
+  margin-left 220px
+
+header
+  margin-top 50px
+
+section#content
+  margin-top 50px
+  margin-bottom 50px
+  min-height 350px
+
+nav
+  position fixed
+  top 65px
+  left 50px
+  width 120px
+  
+  ul
+    list-style none
+    li
+      margin-left 0px
+      a
+        &:hover
+          text-decoration underline
+
+footer
+  margin-top 50px
+  margin-bottom 50px
+  
+  .branding
+    a.branding
+      button-shiny(#cc3300, #fff)

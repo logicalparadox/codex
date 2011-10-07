@@ -12,14 +12,13 @@ html(lang='en')
           - if (files.pages)
             for page in files.pages
               li: a(href=page.href)= page.title
-    #header-wrap
+    header
       block header
-        h1 #{file.title}
-    content
+    section#content
       block content
         .wrap!= file.prepared
     footer
       block footer
-        :markdown
-          Site built by [Codex](http://logicalparadox.github.com/codex).
+        .branding Built by 
+          a.button.branding(href='http://logicalparadox.github.com/codex') Codex
     
