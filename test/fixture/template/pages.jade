@@ -1,5 +1,4 @@
-include header
-  #content
-    h2 Page: #{file.title}
-    .prepared!= file.prepared
-  include footer
+extends layout
+
+block content
+  .wrap!= file.prepared
