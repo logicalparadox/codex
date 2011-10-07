@@ -11,53 +11,36 @@
       <ul class="pages">
         <li><a href="/">Home</a>
         </li>
-        <li><a href="/pages/about.html">About</a>
-        </li>
-        <li><a href="/pages/archive.html">Archive</a>
-        </li>
       </ul>
     </nav>
     <header>
       <h1>Codex
       </h1>
+      <div class="github"><a href="https://github.com/codexjs/codex" class="button">Fork Me on Github</a>
+      </div>
     </header>
     <section id="content">
-      <article><p>Welcome to your new site.</p>
+      <article><p>Codex is a static site generator powered by a bunch of cool Node.js
+tools. I will be publish documentation soon. As well as some themes
+as I get them going. Until then, here is what you need to know&hellip;</p>
 
 <ul>
-<li>Visit the documentation on <a href="http://codexjs.com">CodexJs.com</a>.</li>
-<li><a href="http://github.com/logicalparadox/codex">Fork Codex on Github</a>.</li>
+<li>Content is written in Markdown</li>
+<li>Templates are writen in Jade</li>
+<li>Styles are written in Stylus</li>
 </ul>
 
 
-<p><code>
-// just a code sample
-function codex() {
-  var poweredBy='codex';
-  return poweredBy;
-}
-</code></p>
+<h3>Starting a New Site</h3>
+
+<pre><code>npm install codex -g
+codex skeleton new-project
+cd new-project
+codex build
+</code></pre>
 
 <p>Enjoy!</p>
       </article>
-      <div id="recent-posts" class="widget">
-        <h3>Recent Posts
-        </h3>
-        <ul>
-          <li>
-            <h4><a href="/posts/sample1.html">Sample 1</a>
-            </h4>
-            <div class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus est tortor, accumsan in sodales sed, suscipit in eros. Donec semper nullam.
-            </div>
-          </li>
-          <li>
-            <h4><a href="/posts/sample2.html">Sample 2</a>
-            </h4>
-            <div class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel tortor lorem. Donec vel tortor sed eros laoreet tincidunt. In hac volutpat.
-            </div>
-          </li>
-        </ul>
-      </div>
     </section>
     <footer>
       <div class="branding">Built by <a href="http://logicalparadox.github.com/codex" class="button branding">Codex</a>

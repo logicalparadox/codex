@@ -2,17 +2,19 @@
   title: Codex
 ---
 
-Welcome to your new site.
+Codex is a static site generator powered by a bunch of cool Node.js
+tools. I will be publish documentation soon. As well as some themes
+as I get them going. Until then, here is what you need to know...
 
-* Visit the documentation on [CodexJs.com](http://codexjs.com).
-* [Fork Codex on Github](http://github.com/logicalparadox/codex).
+* Content is written in Markdown
+* Templates are writen in Jade
+* Styles are written in Stylus
 
-```
-// just a code sample
-function codex() {
-  var poweredBy='codex';
-  return poweredBy;
-}
-```
+### Starting a New Site
+
+    npm install codex -g
+    codex skeleton new-project
+    cd new-project
+    codex build
 
 Enjoy!

@@ -2,6 +2,8 @@ extends layout
 
 block header
   h1= file.title
+  .github
+    a.button(href='https://github.com/codexjs/codex') Fork Me on Github
 
 block content
   article!= file.prepared

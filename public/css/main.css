@@ -182,6 +182,42 @@ nav ul li {
 nav ul li a:hover {
   text-decoration: underline;
 }
+a.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #e6e6e6));
+  background: -webkit-linear-gradient(top, #fafafa 0%, #e6e6e6 100%);
+  background: -moz-linear-gradient(top, #fafafa 0%, #e6e6e6 100%);
+  background: linear-gradient(top, #fafafa 0%, #e6e6e6 100%);
+  border: 1px solid #bfbfbf;
+  font: 11px/normal helvetica, arial, freesans, clean, sans-serif;
+  color: #262626;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #fff;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+a.button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3c7ec0), color-stop(1, #3570aa));
+  background: -webkit-linear-gradient(top, #3c7ec0 0%, #3570aa 100%);
+  background: -moz-linear-gradient(top, #3c7ec0 0%, #3570aa 100%);
+  background: linear-gradient(top, #3c7ec0 0%, #3570aa 100%);
+  color: #fff;
+  text-shadow: -1px -1px 0px #285480;
+  border: 1px solid #2d5f91;
+}
+pre {
+  font-size: 10px;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 footer {
   margin-top: 50px;
   margin-bottom: 50px;
