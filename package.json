@@ -8,6 +8,7 @@
     "url": "git://github.com/logicalparadox/codex.git"
   },
   "main": "index",
+  "bin": "./bin/codex",
   "engines": {
     "node": ">= 0.4.8"
   },
@@ -18,12 +19,13 @@
     "mkdirp": "0.0.x",
     "jade": "0.16.x",
     "stylus": "0.17.x",
+    "fez": "0.0.x",
     "nib": "0.2.x",
     "colors": "0.5.x",
     "async": "0.1.x",
     "eyes": "0.1.x",
     "ncp": "0.2.x",
-    "yaml": "0.2.2"
+    "yaml": "0.2.x"
   },
   "devDependencies": {}
 }

@@ -8,7 +8,7 @@ var program = require('commander')
   , path = require('path')
   , inspect = require('eyes').inspector()
   , colors = require('colors')
-  , Codex = require('../lib/codex');
+  , Codex = require('../');
   
 
 var cwd = process.cwd();
