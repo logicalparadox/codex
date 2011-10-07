@@ -2,4 +2,9 @@ include header
   #content
     h2 #{file.inFile}
     content!= file.prepared
+    #articles
+      - if (files.posts)
+        ul
+        for post in files.posts
+          li #{post.href}
   include footer

@@ -21,7 +21,8 @@
     "nib": "0.2.x",
     "colors": "0.5.x",
     "async": "0.1.x",
-    "eyes": "0.1.x"
+    "eyes": "0.1.x",
+    "ncp": "0.2.x"
   },
   "devDependencies": {}
 }
