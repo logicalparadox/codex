@@ -1,4 +1,12 @@
 
+0.0.2 / 2011-10-08 
+==================
+
+  * skeleton template footer url change: codexjs.com
+  * codex.json in data folder support
+  * always rendered as index.html ... parent folder = *.md filename
+  * changelog for 0.0.1
+
 0.0.1 / 2011-10-07 
 ==================
 
@@ -7,15 +15,12 @@
   * updated default template
   * fez!
   * default template updates
-  * Merge branch 'feature/markdown-headers'
   * latest render
   * now support yaml headers. `title` and `template` defined by default
   * cleaning up fixture/default template
-  * Merge branch 'feature/use-stylus'
   * fixture updates
   * asset directory copy and stylus render
   * include basic stylus fixture
-  * Merge branch 'feature/usejade'
   * jade render works
   * shortname for stout
   * better outpath handling
