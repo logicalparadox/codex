@@ -1,4 +1,12 @@
 
+0.0.3 / 2011-10-11 
+==================
+
+  * Merge branch 'feature/server'
+  * serve static support good
+  * locals group identification for root files
+  * improved defaults util
+
 0.0.2 / 2011-10-08 
 ==================
 
