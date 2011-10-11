@@ -25,7 +25,8 @@
     "async": "0.1.x",
     "eyes": "0.1.x",
     "ncp": "0.2.x",
-    "yaml": "0.2.x"
+    "yaml": "0.2.x",
+    "connect": "1.7.x"
   },
   "devDependencies": {}
 }
