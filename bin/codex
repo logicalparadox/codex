@@ -104,8 +104,7 @@ program
     if (outDir.substr(0, 1) != '/')
       outDir = path.resolve(cwd, outDir);
     
-    port = port || 1227
-    console.log(port)
+    port = port || 1227;
     var app = connect.createServer();
     app.use(connect.static(outDir));
     app.listen(port);
