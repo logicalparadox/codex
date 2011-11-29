@@ -5,6 +5,7 @@
  */
 
 var program = require('commander')
+  , tea = require('tea')
   , path = require('path')
   , fs = require('fs')
   , inspect = require('eyes').inspector()
@@ -31,13 +32,13 @@ program
     var inDir = directory || cwd
       , outDir = program.out || path.join(cwd, 'out');
     
-    if (outDir.substr(0, 1) != '/')
+    if (!tea.isPathAbsolute(outDir))
       outDir = path.resolve(cwd, outDir);
     
     var codex = new Codex(inDir, outDir);
     
     codex.on('status', function (status) {
-      message = status.message.green + ( (status.target) ? ': '.green + status.target.blue : '' );
+      var message = status.message.green + ( (status.target) ? ': '.green + status.target.blue : '' );
       console.log('✓   '.green.bold + message);
       if (status.array) {
         status.array.forEach(function (line) {
@@ -61,7 +62,7 @@ program
   .action(function (directory) {
     
     if (directory) {
-      if (directory.substr(0, 1) != '/')
+      if (!tea.isPathAbsolute(outDir))
         directory = path.resolve(cwd, directory);
     } else {
       directory = cwd;
@@ -80,6 +81,7 @@ program
           console.log('    ' + directory.blue);
         });
       };
+      
       if (list.length > 0) {
         program.confirm('Directory isn\'t empty, are you sure you want to continue?'.yellow + ' ', function (ok) {
           if (ok) {
