@@ -13,11 +13,12 @@
     "node": ">= 0.4.8"
   },
   "dependencies": {
-    "commander": "0.4.x",
+    "commander": "0.5.x",
+    "drip": "0.2.x",
     "tea": "0.1.x",
-    "drip": "0.1.x",
     "discount": "0.2.x",
-    "jade": "0.18.x",
+    "dox": "0.1.x",
+    "jade": "0.19.x",
     "stylus": "0.19.x",
     "fez": "0.0.x",
     "nib": "0.3.x",
