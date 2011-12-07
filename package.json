@@ -16,7 +16,7 @@
     "commander": "0.5.x",
     "drip": "0.2.x",
     "tea": "0.1.x",
-    "discount": "0.2.x",
+    "markdown": "0.3.x",
     "dox": "0.1.x",
     "jade": "0.19.x",
     "stylus": "0.19.x",
