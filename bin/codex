@@ -13,7 +13,7 @@ var program = require('commander')
   , connect = require('connect')
   , ncp = require('ncp').ncp
   , Codex = require('../');
-  
+
 
 var cwd = process.cwd();
 
@@ -31,12 +31,12 @@ program
   .action(function (directory) {
     var inDir = directory || cwd
       , outDir = program.out || path.join(cwd, 'out');
-    
+
     if (!tea.isPathAbsolute(outDir))
       outDir = path.resolve(cwd, outDir);
-    
+
     var codex = new Codex(inDir, outDir);
-    
+
     codex.on('status', function (status) {
       var message = status.message.green + ( (status.target) ? ': '.green + status.target.blue : '' );
       console.log('✓   '.green.bold + message);
@@ -46,13 +46,13 @@ program
         });
       }
     });
-    
+
     codex.on('error', function (error) {
       console.log('✗   '.red.bold + error.message.red);
       inspect(error.data);
       process.exit();
     });
-    
+
     codex.build();
   });
 
@@ -60,28 +60,30 @@ program
   .command('skeleton [dirname]')
   .description('Create a skeleton site. Defaults to current working directory.')
   .action(function (directory) {
-    
+
     if (directory) {
       if (!tea.isPathAbsolute(outDir))
         directory = path.resolve(cwd, directory);
     } else {
       directory = cwd;
     }
-    
+
+    console.log('');
+
     if (!path.existsSync(directory)) {
-      console.log('✗   '.red.bold + 'Path for skeleton does not exist.'.red);
+      console.log('  ✗ '.red.bold + 'Path for skeleton does not exist.'.red);
       process.exit();
     }
-    
+
     fs.readdir(directory, function(err, list) {
       var copy = function () {
         ncp(path.join(__dirname, '..', 'skeleton'), directory, function (err) {
           if (err) throw err;
-          console.log('✓   '.green.bold + 'Skeleton successfully created.');
+          console.log('  ✓ '.green.bold + 'Skeleton successfully created.');
           console.log('    ' + directory.blue);
         });
       };
-      
+
       if (list.length > 0) {
         program.confirm('Directory isn\'t empty, are you sure you want to continue?'.yellow + ' ', function (ok) {
           if (ok) {
@@ -102,16 +104,16 @@ program
   .description('Starts a static server to view the generated files. Use -o to indicated what directory to serve.')
   .action(function (port) {
     var outDir = program.out || path.join(cwd, 'out');
-    
+
     if (outDir.substr(0, 1) != '/')
       outDir = path.resolve(cwd, outDir);
-    
+
     port = port || 1227;
     var app = connect.createServer();
     app.use(connect.static(outDir));
     app.listen(port);
     console.log('✓   '.green.bold + 'Static server successfully started on port ['.blue + port.toString().blue + ']'.blue);
-    
+
   });
 
 program.parse(process.argv);
