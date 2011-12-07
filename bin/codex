@@ -20,6 +20,7 @@ var cwd = process.cwd();
 program
   .version(Codex.version)
   .option('-o, --out [dir]', 'Specify an out directory for build, defaults to `__inPath__/out`')
+  .option('-s, --static [dir]', 'Specify the folder path to mount the static server at.');
 
 setTimeout(function() {
   var b = 'c';
@@ -108,9 +109,11 @@ program
     if (outDir.substr(0, 1) != '/')
       outDir = path.resolve(cwd, outDir);
 
+    var getp = (program.static) ? (program.static) : '';
+
     port = port || 1227;
     var app = connect.createServer();
-    app.use(connect.static(outDir));
+    app.use(getp, connect.static(outDir));
     app.listen(port);
     console.log('✓   '.green.bold + 'Static server successfully started on port ['.blue + port.toString().blue + ']'.blue);
 
