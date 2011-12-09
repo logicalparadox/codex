@@ -1,3 +1,5 @@
 /lib-cov/
 /node_modules/
 .settings.xml
+
+.DS_Store
