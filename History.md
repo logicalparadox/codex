@@ -1,4 +1,12 @@
 
+0.0.5 / 2011-12-15
+==================
+
+  * parse site description as markdown
+  * [gitignore]
+  * added makefile
+  * updated description
+
 0.0.4 / 2011-12-07
 ==================
 
