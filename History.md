@@ -1,4 +1,11 @@
 
+0.0.6 / 2012-01-02
+==================
+
+  * using utils
+  * added utils to make up for tea phaseout
+  * removed tea dep
+
 0.0.5 / 2011-12-15
 ==================
 
