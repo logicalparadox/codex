@@ -5,7 +5,7 @@
  */
 
 var program = require('commander')
-  , tea = require('tea')
+  , utils = require('../lib/utils')
   , path = require('path')
   , fs = require('fs')
   , inspect = require('eyes').inspector()
@@ -33,7 +33,7 @@ program
     var inDir = directory || cwd
       , outDir = program.out || path.join(cwd, 'out');
 
-    if (!tea.isPathAbsolute(outDir))
+    if (!utils.isPathAbsolute(outDir))
       outDir = path.resolve(cwd, outDir);
 
     var codex = new Codex(inDir, outDir);
@@ -63,7 +63,7 @@ program
   .action(function (directory) {
 
     if (directory) {
-      if (!tea.isPathAbsolute(outDir))
+      if (!utils.isPathAbsolute(directory))
         directory = path.resolve(cwd, directory);
     } else {
       directory = cwd;
