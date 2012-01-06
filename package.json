@@ -13,17 +13,15 @@
     "node": ">= 0.4.8"
   },
   "dependencies": {
-    "commander": "0.5.x",
     "drip": "0.2.x",
+    "tea": "0.0.x",
+    "optimist": "0.3.x",
     "markdown": "0.3.x",
     "dox": "0.1.x",
-    "jade": "0.19.x",
-    "stylus": "0.19.x",
+    "jade": "0.20.x",
+    "stylus": "0.22.x",
     "fez": "0.0.x",
     "nib": "0.3.x",
-    "colors": "0.5.x",
-    "async": "0.1.x",
-    "eyes": "0.1.x",
     "ncp": "0.2.x",
     "yaml": "0.2.x",
     "connect": "1.8.x"
