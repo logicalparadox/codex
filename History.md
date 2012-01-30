@@ -1,4 +1,31 @@
 
+0.1.0 / 2012-01-30 
+==================
+
+  * help cleaning language
+  * Merge branch 'feature/v01x'
+  * removing old bin
+  * added cli skeleton and serve commands
+  * cli output cleaner
+  * build cycle cli
+  * cli cleaned up
+  * folder restructuring
+  * added testing resources and first tests
+  * added a clean option
+  * finish refactoring of render process
+  * grouping for pages middleware good
+  * code cleanup, oath 0.2.3 compat
+  * updated git ignore
+  * spacing cleanup
+  * pages outDir reference fix
+  * pages middleware
+  * project event listening - register (file, group)
+  * project loads middleware
+  * change markdown sep to `marked`
+  * skeleton md updates
+  * codex cli interface help command
+  * prep deps for 0.1.x
+
 0.0.6 / 2012-01-02
 ==================
 

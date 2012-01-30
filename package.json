@@ -2,7 +2,7 @@
   "author": "Jake Luer <jake@alogicalparadox.com>",
   "name": "codex",
   "description": "Static site and code documentation generator.",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/logicalparadox/codex.git"
