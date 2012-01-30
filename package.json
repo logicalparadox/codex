@@ -24,8 +24,12 @@
     "fez": "0.0.x",
     "nib": "0.3.x",
     "ncp": "0.2.x",
+    "rimraf": "2.0.x",
     "yaml": "0.2.x",
     "connect": "1.8.x"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
 }
