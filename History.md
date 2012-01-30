@@ -1,4 +1,15 @@
 
+0.1.1 / 2012-01-30 
+==================
+
+  * Merge branch 'feature/configfile'
+  * load config file before middleware
+  * cross version exists compat
+  * Merge branch 'feature/watch'
+  * cli#watch
+  * project#flush
+  * utilities for directory watching
+
 0.1.0 / 2012-01-30 
 ==================
 
