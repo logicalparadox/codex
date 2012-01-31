@@ -18,6 +18,7 @@
     "oath": "0.2.x",
     "optimist": "0.3.x",
     "marked": "0.1.x",
+    "highlight": "0.2.x",
     "dox": "0.1.x",
     "jade": "0.20.x",
     "stylus": "0.22.x",
