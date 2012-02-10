@@ -1,21 +1,54 @@
 # Codex
 
-Static site generation from markdown files.
+> Generate static websites using Markdown, Jade, and Stylus.
 
-* Content is written in Markdown
-* Templates are writen in Jade
-* Styles are written in Stylus
+Codex is a simple tool for building static webites. It takes a template constructed in
+[Jade](http://github.com/visionmedia/jade) and themed in [Stylus](http://github.com/learnboost/stylus),
+and applies it to a collection of Markdown documents. The result is a complete html site
+that can be hosted using your favorite webserver, or on github-pages. 
 
-Yeah, super easy :D
+### Features
 
-## Starting Up
+* Skeleton project template
+* Command-line or API based project configuration and building
+* Plugin based loading system for advanced features
+* Includes `code` plugin for generating document sites for javascript/node.js projects.
+
+### Sites by Codex
+
+* [Chaijs.com](http://chaijs.com) - Chai is an assertion library for javascript projects. It's
+documentation was built by Codex and uses the `code` plugin extensively.
+
+## Installation
+
+You can install Codex through npm. Global installation is recommended for new projects.
+
+      $ [sudo] npm install codex -g
+
+## First Project
 
 ```sh
-npm install codex -g
-codex skeleton new-project
-cd new-project
-codex build
+codex skeleton my-project
+cd my-project
+codex watch -p 1227
 ```
+
+Using the `watch` command will automatically regenerate your site every time codex detects
+a change in either your template or data folders.
+
+## CLI Usage
+
+There are a number of options available for the command line interface...
+
+![Codex CLI](http://f.cl.ly/items/06212s342p2G0d0l2v0p/codex-help.png)
+
+## Code Plugin
+
+... coming soon
+
+## Getting Help
+
+Please post issues or questions to [Github Issues](http://github.com/logicalparadox/codex/issues). 
 
 ## License
 
