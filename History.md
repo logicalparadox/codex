@@ -1,4 +1,16 @@
 
+0.2.0 / 2012-02-10 
+==================
+
+  * bug with code href generation
+  * descriptions always are MD
+  * test stuffs for code plugin
+  * added code plugin
+  * bugfixes for plugin loading
+  * plugins is a more appropriate name
+  * code highlighting by default
+  * watcher only watches certain extensions
+
 0.1.1 / 2012-01-30 
 ==================
 
