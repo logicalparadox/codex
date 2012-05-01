@@ -13,7 +13,7 @@
   "main": "index",
   "bin": "./bin/codex",
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "engines": {
     "node": ">= 0.4.8"
