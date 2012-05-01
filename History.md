@@ -1,4 +1,17 @@
 
+0.2.1 / 2012-05-01 
+==================
+
+  * package.json test script is `make test`
+  * Merge pull request #6 from domenic/package.json
+  * Merge pull request #7 from domenic/windows
+  * Merge pull request #5 from domenic/typo
+  * Making work on Windows by using `path.resolve`.
+  * Fixing typo/bug.
+  * Adding bugs and test script to package.json.
+  * read me updates
+  * added help for watch command
+
 0.2.0 / 2012-02-10 
 ==================
 
