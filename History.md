@@ -1,4 +1,14 @@
 
+0.2.2 / 2012-05-02 
+==================
+
+  * Merge branch 'master' of github.com:logicalparadox/codex
+  * added travis file
+  * Merge pull request #9 from domenic/watch
+  * Merge pull request #8 from domenic/watch-port
+  * Using `fs.watch` for Windows compatibility.
+  * Pass through port/p and mount/m options when using watch.
+
 0.2.1 / 2012-05-01 
 ==================
 
