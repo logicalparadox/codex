@@ -1,4 +1,12 @@
 
+0.2.3 / 2012-05-07 
+==================
+
+  * code plugin respects defaults
+  * better code highlighting detection and parsing
+  * update deps
+  * travis misformatted
+
 0.2.2 / 2012-05-02 
 ==================
 
