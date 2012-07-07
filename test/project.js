@@ -2,7 +2,7 @@ var should = require('chai').should()
   , rimraf = require('rimraf')
   , path = require('path')
   , fs = require('fs')
-  , exists = path.existsSync || fs.existsSync;
+  , exists = fs.existsSync || fs.existsSync;
 
 var codex = require('..');
 
