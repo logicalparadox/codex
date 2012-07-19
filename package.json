@@ -19,21 +19,20 @@
     "node": ">= 0.4.8"
   },
   "dependencies": {
-    "drip": "0.2.x",
-    "tea": "0.0.x",
-    "oath": "0.2.x",
-    "optimist": "0.3.x",
-    "marked": "0.2.x",
-    "highlight.js": "1.2.x",
+    "breeze": "0.3.0",
+    "connect": "2.3.x",
     "dox": "0.3.x",
+    "drip": "0.3.x",
+    "fsagent": "0.3.x",
+    "marked": "0.2.x",
+    "highlight.js": "7.0.x",
     "jade": "0.26.x",
-    "stylus": "0.26.x",
+    "stylus": "0.28.x",
     "fez": "0.0.x",
-    "nib": "0.4.x",
+    "nib": "0.7.x",
     "ncp": "0.2.x",
-    "rimraf": "2.0.x",
-    "yaml": "0.2.x",
-    "connect": "1.8.x"
+    "quantum": "0.3.x",
+    "yaml": "0.2.x"
   },
   "devDependencies": {
     "chai": "*",
