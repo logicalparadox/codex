@@ -1,8 +1,6 @@
 var should = require('chai').should()
-  , rimraf = require('rimraf')
   , path = require('path')
-  , fs = require('fs')
-  , exists = path.existsSync || fs.existsSync;
+  , fs = require('fsagent');
 
 var codex = require('..');
 
@@ -28,7 +26,7 @@ describe('Project', function () {
   });
 
   after(function (done) {
-    rimraf(out, done);
+    fs.rimraf(out, done);
   });
 
   it('should have a version', function () {
@@ -39,24 +37,11 @@ describe('Project', function () {
     project.config.inDir.should.be.ok;
   });
 
-  it('should correctly setup folders', function (done) {
-    project.once('error', onError);
-    project.assertFolders().then(
-        function () {
-          project.config.outDir.should.equal(out);
-          project.config.templateDir.should.equal(temp);
-          exists(out).should.be.true;
-          done();
-        }
-      , onError
-    );
-  });
-
   it('should correctly build', function (done) {
     project.on('error', onError);
     project.build(function () {
-      exists(out).should.be.true;
-      exists(path.join(out, 'public/css/main.css')).should.be.true;
+      fs.existsSync(out).should.be.true;
+      fs.existsSync(path.join(out, 'public/css/main.css')).should.be.true;
       done();
     });
   });
