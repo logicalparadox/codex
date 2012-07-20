@@ -24,6 +24,7 @@
     "dox": "0.3.x",
     "dragonfly": "0.2.x",
     "drip": "0.3.x",
+    "electron": "0.2.x",
     "fsagent": "0.3.x",
     "marked": "0.2.x",
     "highlight.js": "7.0.x",
