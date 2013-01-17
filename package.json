@@ -19,25 +19,25 @@
     "node": ">= 0.4.8"
   },
   "dependencies": {
-    "breeze": "0.3.0",
-    "connect": "2.3.x",
-    "dox": "0.3.x",
-    "dragonfly": "0.2.x",
-    "drip": "0.3.x",
-    "electron": "0.2.x",
-    "fsagent": "0.3.x",
-    "marked": "0.2.x",
-    "highlight.js": "7.0.x",
-    "jade": "0.26.x",
-    "stylus": "0.28.x",
-    "fez": "0.0.x",
-    "nib": "0.7.x",
-    "ncp": "0.2.x",
-    "quantum": "0.3.x",
-    "yaml": "0.2.x"
+      "breeze-async": "0.1.x"
+    , "connect": "2.7.x"
+    , "dox": "0.4.x"
+    , "drip": "1.1.x"
+    , "electron": "0.3.x"
+    , "fsagent": "0.3.x"
+    , "marked": "0.2.x"
+    , "highlight.js": "7.3.x"
+    , "jade": "0.28.x"
+    , "stylus": "0.32.x"
+    , "tea-error": "0.1.x"
+    , "fez": "0.0.x"
+    , "nib": "0.9.x"
+    , "ncp": "0.2.x"
+    , "quantum": "0.3.x"
+    , "yaml": "0.2.x"
   },
   "devDependencies": {
-    "chai": "*",
-    "mocha": "*"
+      "chai": "*"
+    , "mocha": "*"
   }
 }
