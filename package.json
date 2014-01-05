@@ -3,6 +3,7 @@
   "name": "codex",
   "description": "Static site and code documentation generator.",
   "version": "0.2.3",
+  "homepage": "https://github.com/logicalparadox/codex",
   "repository": {
     "type": "git",
     "url": "git://github.com/logicalparadox/codex.git"
